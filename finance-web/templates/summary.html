@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <p>Total Income: ${{ income }}</p>
+    <p>Total Expenses: ${{ expense }}</p>
+    <p>Net Balance: ${{ net }}</p>
+    <a href="/">Back to Add More</a>
+
+    <h2>Spending Charts</h2>
+    <img src="{{ url_for('static', filename='pie_chart.png') }}" alt="Pie Chart" width="400">
+    <img src="{{ url_for('static', filename='bar_chart.png') }}" alt="Bar Chart" width="500">
+{% endblock %}

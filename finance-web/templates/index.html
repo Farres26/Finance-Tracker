@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <form action="/add" method="post">
+        <label>Date: <input type="date" name="date" required></label><br>
+        <label>Type:
+            <select name="type">
+                <option value="income">Income</option>
+                <option value="expense">Expense</option>
+            </select>
+        </label><br>
+        <label>Category: <input type="text" name="category" required></label><br>
+        <label>Amount: <input type="number" name="amount" step="0.01" required></label><br>
+        <button type="submit">Add Transaction</button>
+    </form>
+    <a href="/summary">View Summary</a>
+{% endblock %}
